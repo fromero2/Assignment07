@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:8889
--- Generation Time: Nov 02, 2017 at 05:30 AM
+-- Generation Time: Nov 05, 2017 at 08:02 PM
 -- Server version: 5.6.35
 -- PHP Version: 7.1.6
 
@@ -19,8 +19,6 @@ SET time_zone = "+00:00";
 --
 -- Database: `widget_corp`
 --
-CREATE DATABASE IF NOT EXISTS `widget_corp` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
-USE `widget_corp`;
 
 -- --------------------------------------------------------
 
@@ -41,7 +39,8 @@ CREATE TABLE `contacts` (
 --
 
 INSERT INTO `contacts` (`counter`, `firstname`, `lastname`, `number`, `email`) VALUES
-(0, '', '', '', '');
+(1, '', '', '', ''),
+(2, 'Frankie', 'Romero', '3476799699', 'frankie.a.romero@gmail.com');
 
 --
 -- Indexes for dumped tables
@@ -51,8 +50,17 @@ INSERT INTO `contacts` (`counter`, `firstname`, `lastname`, `number`, `email`) V
 -- Indexes for table `contacts`
 --
 ALTER TABLE `contacts`
-  ADD PRIMARY KEY (`firstname`);
+  ADD PRIMARY KEY (`counter`);
 
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `contacts`
+--
+ALTER TABLE `contacts`
+  MODIFY `counter` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
