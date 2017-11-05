@@ -20,8 +20,8 @@
 	// 2. Perform database query
 	$query  = "SELECT * ";
 	$query .= "FROM contacts ";
-	$query .= "WHERE visible = 1 ";
-	$query .= "ORDER BY position ASC";
+	// $query .= "WHERE visible = 1 ";
+	// $query .= "ORDER BY position ASC";
 
 
 	$result = mysqli_query($connection, $query);

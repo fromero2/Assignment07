@@ -7,18 +7,18 @@
 
 	$connection = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
 
-    if ($connection) { echo 'connected'; } else { echo 'not connected'; }
+    // if ($connection) { echo 'connected'; } else { echo 'not connected'; }
 
 	// Often these are form values in $_POST
-	$menu_name = "Contact";
-	$position = (int) 5;
-	$visible = (int) 1;
+	// $menu_name = "Contact";
+	// $position = (int) 5;
+	// $visible = (int) 1;
 
     //HTML form values in post 
-    $firstname = trim(stripslashes($POST['firstname']));
-    $lastname = trim(stripslashes($POST['lastname']));
-    $number = trim(stripslashes($POST['number']));
-    $email = trim(stripslashes($POST['email']));
+    $firstname = trim(stripslashes($_POST['firstname']));
+    $lastname = trim(stripslashes($_POST['lastname']));
+    $number = trim(stripslashes($_POST['number']));
+    $email = trim(stripslashes($_POST['email']));
 
 
 
@@ -34,7 +34,7 @@
 
 	// 2. Perform database query
 	$query  = "INSERT INTO contacts (";
-	$query .= " firstname, lastname, mumber, email";
+	$query .= " firstname, lastname, number, email";
 	$query .= ") VALUES (";
 	$query .= " '{$firstname}', '{$lastname}', '{$number}', '{$email}'";
 	$query .= ")";
@@ -67,7 +67,7 @@
 	}
 ?>
                 <br>
-                <a href="contacts-list">Continue</a>
+                <a href="contacts-list.php">Continue</a>
 
     </body>
 
